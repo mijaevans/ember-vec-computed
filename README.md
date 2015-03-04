@@ -1,25 +1,21 @@
 # Ember-vec-computed
 
-This README outlines the details of collaborating on this Ember addon.
+This is an ember-cli addon. It implements the following Ember computed properties:
 
-## Installation
+	sum(arg1, arg2, [arg3...])
+	product(arg1, arg2, [arg3...])
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+These properties perform vector calculations between its arguments.Each argument can be an array, name of a property or another computed property e.g.
 
-## Running
+	EmVec.vector.sum('numCakes',4,EmVec.vector.product('icing',3))
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+The computed result is an array where each element is calculated from the corresponding elements in the arguments (e.g. arg0[0]+arg1[0]+arg2[0]). 
 
-## Running Tests
+If an argument is a single value (e.g. 10.3) instead of an array then the value is applied to all elements. If an array does not have an value at the needed element (i.e. the dependent array has fewer elements) then zero is used as a default.
 
-* `ember test`
-* `ember test --server`
+In ember-cli, the computed properties are imported from 'ember-vec-computed' module and are accessed from EmVec.vector. They can be also  installed into the Ember.computed namespace using the EmVec.install function.
 
-## Building
+Currently, this is a learning project. The computed properties should use the arrayComputed and reduceComputed methods. More computed properties will be added soon.
 
-* `ember build`
+Many thanks to the ember-cpm project [https://github.com/cibernox/ember-cpm]. It was a great example on how to do this properly.
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

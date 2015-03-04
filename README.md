@@ -17,5 +17,5 @@ In ember-cli, the computed properties are imported from 'ember-vec-computed' mod
 
 Currently, this is a learning project. The computed properties should use the arrayComputed and reduceComputed methods. More computed properties will be added soon.
 
-Many thanks to the ember-cpm project [https://github.com/cibernox/ember-cpm]. It was a great example on how to do this properly.
+Many thanks to the [ember-cpm] (https://github.com/cibernox/ember-cpm) project. It was a great example on how to do this properly.
 
